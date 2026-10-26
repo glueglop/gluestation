@@ -364,7 +364,7 @@ impl Gpu {
         }
     }
 
-    fn execute_gp0_cmd(&mut self) {bly
+    fn execute_gp0_cmd(&mut self) {
         let mut buf = std::mem::take(&mut self.cmd_buffer);
         let op = buf[0] >> 24;
 
