@@ -1,0 +1,9 @@
+[package]
+name = "psx_emu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gl = "0.14"
+x11-dl = "2.21"
+libc = "0.2"

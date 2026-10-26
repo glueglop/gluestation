@@ -1,0 +1,6 @@
+/target
+*.bin
+*.BIN
+*.cue
+*.iso
+*.exe
