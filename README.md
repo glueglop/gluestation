@@ -78,11 +78,8 @@ Audio debugging
 
 The first five seconds of audio are saved to chime.wav in the current directory so you can inspect what the SPU is producing.
 
-Layout
-------
-
-File What it does
----- ------------
+What each file does
+-------------------
 
 cpu.rs	R3000A CPU, COP0, hooks into the GTE
 
