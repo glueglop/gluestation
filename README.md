@@ -36,9 +36,13 @@ Anything that isn't Linux
 Requirements
 ------------
 Linux with X11 (no Wayland-only setups)
+
 A GPU and driver that support OpenGL 3.3 core through GLX
+
 ALSA (libasound.so.2). PipeWire and PulseAudio work through their ALSA compatibility layers
+
 A recent Rust toolchain
+
 A PS1 BIOS dump (see below)
 
 If audio can't be opened, the emulator prints a message and keeps running without sound.
