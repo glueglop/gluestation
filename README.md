@@ -11,20 +11,30 @@ Works:
 
 MIPS R3000A CPU with branch and load delay slots, COP0 exceptions and interrupts
 BIOS boots from the reset vector
+
 GPU rasterizer drawing into 1024x512 VRAM (polygons, rectangles, lines, textures with CLUTs, semi-transparency)
+
 GTE (the geometry coprocessor)
+
 DMA (GPU, SPU, ordering table clear), root counters, interrupt controller
+
 SPU with ADPCM voices and native audio output
 
 Not done yet:
 -------------
 
 Audio quality: no ADSR envelopes, no interpolation, no reverb, so the startup chime sounds distorted
+
 CD-ROM: the controller pretends there is no disc, so games can't load
+
 Controllers and memory cards
+
 Timer sync modes
+
 Anything that isn't Linux
+
 Requirements
+------------
 Linux with X11 (no Wayland-only setups)
 A GPU and driver that support OpenGL 3.3 core through GLX
 ALSA (libasound.so.2). PipeWire and PulseAudio work through their ALSA compatibility layers
