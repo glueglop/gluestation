@@ -50,7 +50,12 @@ If audio can't be opened, the emulator prints a message and keeps running withou
 BIOS
 ----
 
-You need to supply your own BIOS file. No BIOS or game files are included or distributed here, so dump one from a console you own. The emulator defaults to a file named SCPH1001.BIN (512 KB) in the current directory.
+You need to supply your own BIOS file.
+No BIOS or game files are included or distributed here, so dump one from a console you own. 
+
+The emulator defaults to a file named SCPH1001.BIN (512 KB) in the current directory.
+
+Tested with SCPH-1001 BIOS, so if you would like to test with any others, replace the file path with the name of your BIOS file, and create an issue or email me at glueglop[at]protonmail[dot]com. 
 
 Build and run
 bash
@@ -74,18 +79,33 @@ Audio debugging
 The first five seconds of audio are saved to chime.wav in the current directory so you can inspect what the SPU is producing.
 
 Layout
-File	What it does
+------
+
+File What it does
+---- ------------
+
 cpu.rs	R3000A CPU, COP0, hooks into the GTE
+
 gte.rs	Geometry Transformation Engine (COP2)
+
 bus.rs	Memory map, interrupts, unmapped access counters
+
 gpu.rs	GP0/GP1 commands and software rasterizer
+
 dma.rs	DMA channels
+
 spu.rs	Sound unit and ADPCM decoding
+
 cdrom.rs	CD-ROM controller (no disc)
+
 timers.rs	Root counters
+
 ram.rs, bios.rs	Main RAM and BIOS ROM
+
 renderer.rs	X11/GLX window and OpenGL output
+
 audio.rs	ALSA output, loaded at runtime with dlopen
+
 main.rs	Main loop and frame timing
 
 The command I like to use to compile and run it is:
