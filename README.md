@@ -57,24 +57,23 @@ The emulator defaults to a file named SCPH1001.BIN (512 KB) in the current direc
 
 Tested with SCPH-1001 BIOS, so if you would like to test with any others, replace the file path with the name of your BIOS file, and create an issue or email me at glueglop[at]protonmail[dot]com. 
 
-Build and run
-bash
+Build and run command
+
 cargo run --release -- SCPH1001.BIN
 
 The path argument is optional if the file is called SCPH1001.BIN and sits where you run the command. Always use --release, since the emulator steps the CPU one cycle at a time and a debug build will be far too slow.
 
 Run the unit tests with:
 
-bash
 cargo test
-Controls
-Key	Action
-Tab	Toggle between the 4:3 TV view and the full 1024x512 VRAM view
-Esc	Quit
+
+Tab:	Toggle between the 4:3 TV view and the full 1024x512 VRAM view
+Esc:	Quit
 
 Closing the window also quits.
 
 Audio debugging
+---------------
 
 The first five seconds of audio are saved to chime.wav in the current directory so you can inspect what the SPU is producing.
 
@@ -105,9 +104,6 @@ audio.rs	ALSA output, loaded at runtime with dlopen
 
 main.rs	Main loop and frame timing
 
-The command I like to use to compile and run it is:
-"cargo run --release -- _________ (bios file)".
-The blank depends on your PlayStation model/name of your BIOS dump.
 
 Disclaimer:
 PlayStation is a trademark of Sony Interactive Entertainment.
