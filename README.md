@@ -68,6 +68,7 @@ Run the unit tests with:
 cargo test
 
 Tab:	Toggle between the 4:3 TV view and the full 1024x512 VRAM view
+
 Esc:	Quit
 
 Closing the window also quits.
